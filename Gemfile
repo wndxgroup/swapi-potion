@@ -9,6 +9,7 @@ gem "afmotion" # Networking
 
 # Debugging tools
 gem "newclear" # Completely wipe out the simulator and rebuild
+gem "motion-support"
 
 # Optional
 

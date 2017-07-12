@@ -1,21 +1,24 @@
-class HomeScreen < PM::Screen
-  title "Your title here"
-  stylesheet HomeScreenStylesheet
+class MainScreen < PM::TableScreen
+  searchable placeholder: "Search Datasets", no_results: "Sorry, Try Again"
+
+  title "Star Wars - API"
+  stylesheet MainScreenStylesheet
 
   def on_load
-    set_nav_bar_button :left, system_item: :camera, action: :nav_left_button
-    set_nav_bar_button :right, title: "Right", action: :nav_right_button
-
-    @hello_world = append!(UILabel, :hello_world)
   end
 
-  def nav_left_button
-    mp 'Left button'
+  SWAPI_DATASETS = %w( planets spaceships vehicles people films species )
+  def table_data
+    [{
+        title: "Datasets",
+        cells: SWAPI_DATASETS.sort.map do |set|
+          {
+              title: set.titleize
+          }
+        end
+     }]
   end
-
-  def nav_right_button
-    mp 'Right button'
-  end
+  
 
   # You don't have to reapply styles to all UIViews, if you want to optimize, another way to do it
   # is tag the views you need to restyle in your stylesheet, then only reapply the tagged views, like so:
@@ -31,6 +34,7 @@ class HomeScreen < PM::Screen
 
   # Remove the following if you're only using portrait
   def will_animate_rotate(orientation, duration)
-    find.all.reapply_styles
+    reapply_styles
   end
+  
 end

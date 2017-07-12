@@ -66,6 +66,8 @@ GEM
     motion-cocoapods (1.9.0)
       cocoapods (>= 1.0.0)
     motion-require (0.2.0)
+    motion-support (1.1.0)
+      motion-require (>= 0.0.6)
     motion-yaml (1.4)
     motion_print (1.2.0)
     nanaimo (0.2.3)
@@ -105,6 +107,7 @@ DEPENDENCIES
   afmotion
   cdq
   motion-cocoapods
+  motion-support
   motion-yaml (= 1.4)
   newclear
   rake
