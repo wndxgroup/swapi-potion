@@ -13,12 +13,23 @@ class MainScreen < PM::TableScreen
         title: "Datasets",
         cells: SWAPI_DATASETS.sort.map do |set|
           {
-              title: set.titleize
+              title: set.titleize,
+              action: :select_dataset,
+              arguments: {dataset: set},
+              accessory_type: :disclosure_indicator
           }
         end
      }]
   end
-  
+
+  def select_dataset(args={})
+    case args[:dataset]
+      when 'films'
+        open FilmsScreen.new(navbar: true)
+      else
+        puts "Not implemented"
+    end
+  end
 
   # You don't have to reapply styles to all UIViews, if you want to optimize, another way to do it
   # is tag the views you need to restyle in your stylesheet, then only reapply the tagged views, like so:
