@@ -1,15 +1,11 @@
-class FilmsScreen < PM::TableScreen
+class FilmsScreen < PM::DataTableScreen
+  model Film, scope: :released
 
   title "Films"
   stylesheet FilmsScreenStylesheet
 
   def on_load
   end
-
-  def table_data
-    []
-  end
-
 
   # You don't have to reapply styles to all UIViews, if you want to optimize, another way to do it
   # is tag the views you need to restyle in your stylesheet, then only reapply the tagged views, like so:
