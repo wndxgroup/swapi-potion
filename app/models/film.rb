@@ -4,7 +4,10 @@ class Film < CDQManagedObject
   def cell
     {
         title: title,
-        subtitle: "Directed by: #{director}"
+        subtitle: "Directed by: #{director}",
+        action: :show,
+        arguments: { episode_id: episode_id},
+        accessory_type: :disclosure_button
     }
   end
 end
