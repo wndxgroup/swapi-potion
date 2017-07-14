@@ -53,6 +53,7 @@ Motion::Project::App.setup do |app|
   app.development do
     app.codesign_certificate = "iPhone Developer: YOURNAME"
     app.provisioning_profile = "signing/swapi_potion.mobileprovision"
+    app.info_plist['NSAppTransportSecurity'] = { 'NSAllowsArbitraryLoads' => true }
   end
 
   app.release do
