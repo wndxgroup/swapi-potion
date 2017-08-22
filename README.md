@@ -1,7 +1,7 @@
-Introduction to iPhone Development with RubyMotion
+[Introduction to iPhone Development with RubyMotion](https://wndx.school/p/introduction-to-iphone-development-with-rubymotion)
 ===================
 
-This is the sample application built in the [WNDX School](https://wndx.school) workshop
+This is the sample application built in the [WNDX School](https://wndx.school) workshop 
 
 1. [Created the app](https://github.com/wndxgroup/swapi-potion/commit/1c0ea3d2b0118ccf2c2ff84c10fc190aa00e1a95)
 2. [Created new Home Screen with ProMotion](https://github.com/wndxgroup/swapi-potion/commit/ca3980f9f809551d4f0acd84bd997ea990ce11e9)
