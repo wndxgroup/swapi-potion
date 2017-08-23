@@ -1,3 +1,5 @@
+[![Dependency Status](https://dependencyci.com/github/wndxgroup/swapi-potion/badge)](https://dependencyci.com/github/wndxgroup/swapi-potion)
+
 [Introduction to iPhone Development with RubyMotion](https://wndx.school/p/introduction-to-iphone-development-with-rubymotion)
 ===================
 
