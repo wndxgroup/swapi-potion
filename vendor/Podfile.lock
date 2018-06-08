@@ -28,10 +28,15 @@ DEPENDENCIES:
   - AFNetworking (~> 2.5.0)
   - SDWebImage
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - SDWebImage
+
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: 9425200c07713940f8e4471aed8124951f03f25d
+PODFILE CHECKSUM: 5216ebe66250ce0550a0ea53f99b80dfe1aaaea1
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3

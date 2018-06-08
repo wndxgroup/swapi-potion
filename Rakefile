@@ -5,8 +5,6 @@ require 'motion/project/template/ios'
 require 'bundler'
 Bundler.require
 
-# require 'bubble-wrap'
-
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings
 
@@ -51,8 +49,15 @@ Motion::Project::App.setup do |app|
   end
 
   app.development do
-    app.codesign_certificate = "iPhone Developer: YOURNAME"
-    app.provisioning_profile = "signing/swapi_potion.mobileprovision"
+    app.codesign_certificate = MotionProvisioning.certificate(
+      type: :development,
+      platform: :ios)
+
+    app.provisioning_profile = MotionProvisioning.profile(
+      bundle_identifier: app.identifier,
+      app_name: app.name,
+      platform: :ios,
+      type: :development)
     app.info_plist['NSAppTransportSecurity'] = { 'NSAllowsArbitraryLoads' => true }
   end
 
