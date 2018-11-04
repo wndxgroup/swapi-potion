@@ -5,7 +5,7 @@ gem "motion-cocoapods"
 gem "redpotion"
 gem "cdq" # Core Data
 gem "motion-yaml", "1.4" # Version 1.5 breaks CDQ
-gem "afmotion" # Networking
+#gem "afmotion" # Networking
 
 gem "motion-provisioning"
 
@@ -13,6 +13,8 @@ gem "motion-provisioning"
 gem "newclear" # Completely wipe out the simulator and rebuild
 gem "motion-support"
 gem "redpotion-generators"
+
+#gem "ruby-xcdm", git: 'https://github.com/infinitered/ruby-xcdm'
 
 # Optional
 

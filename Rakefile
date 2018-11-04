@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
+#$:.unshift('/Library/RubyMotion5.14/lib')
 $:.unshift('/Library/RubyMotion/lib')
+$:.unshift("~/.rubymotion/rubymotion-templates")
 require 'motion/project/template/ios'
-
 require 'bundler'
 Bundler.require
 
@@ -43,6 +44,7 @@ Motion::Project::App.setup do |app|
 
   app.pods do
     pod 'SDWebImage'
+    pod 'AFNetworking', '~> 2.5'
   #   pod 'JGProgressHUD'
   #   pod 'SVProgressHUD'
   #   pod "FontasticIcons"
@@ -61,16 +63,16 @@ Motion::Project::App.setup do |app|
     app.info_plist['NSAppTransportSecurity'] = { 'NSAllowsArbitraryLoads' => true }
   end
 
-  app.release do
-    app.entitlements['get-task-allow'] = false
-    app.codesign_certificate = 'iPhone Distribution: YOURNAME'
-    app.provisioning_profile = "signing/swapi_potion.mobileprovision"
-    app.entitlements['beta-reports-active'] = true # For TestFlight
-
-    app.seed_id = "YOUR_SEED_ID"
-    app.entitlements['application-identifier'] = app.seed_id + '.' + app.identifier
-    app.entitlements['keychain-access-groups'] = [ app.seed_id + '.' + app.identifier ]
-  end
+  # app.release do
+  #   app.entitlements['get-task-allow'] = false
+  #   app.codesign_certificate = 'iPhone Distribution: YOURNAME'
+  #   app.provisioning_profile = "signing/swapi_potion.mobileprovision"
+  #   app.entitlements['beta-reports-active'] = true # For TestFlight
+  # 
+  #   app.seed_id = "YOUR_SEED_ID"
+  #   app.entitlements['application-identifier'] = app.seed_id + '.' + app.identifier
+  #   app.entitlements['keychain-access-groups'] = [ app.seed_id + '.' + app.identifier ]
+  # end
 
   puts "Name: #{app.name}"
   puts "Using profile: #{app.provisioning_profile}"
