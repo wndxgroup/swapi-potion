@@ -25,7 +25,7 @@ class MainScreen < PM::TableScreen
   def select_dataset(args={})
     case args[:dataset]
       when 'films'
-        open FilmsScreen.new(navbar: true)
+        open FilmsScreen.new(nav_bar: true)
       else
         puts "Not implemented"
     end
